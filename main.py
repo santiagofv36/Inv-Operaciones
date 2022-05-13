@@ -6,6 +6,8 @@
 #  S Number of servers in the system
 
 from model1 import Model1
+from model2 import Model2
+
 
 def model1():
     print()
@@ -16,6 +18,19 @@ def model1():
     n = int(input('n: '))
     data = {'_Lambda': Lambda, '_Mu': Mu, '_n': n}
     model = Model1(data)
+    model.Display()
+
+def model2():
+    print()
+    print('Solving the model 2')
+    print()
+    Lambda = float(input('Lambda: '))
+    Mu = float(input('Mu: '))
+    n = int(input('n: '))
+    k = int(input('k: '))
+    promedio = int(input('LambdaPromedio? (0 no/ 1 si): '))
+    data = {'_Lambda': Lambda, '_Mu': Mu, '_n': n, '_k': k, '_LambdaPromedio': promedio}
+    model = Model2(data)
     model.Display()
 
 def main():
@@ -29,7 +44,7 @@ def main():
         if op == '1':
             model1()
         elif op == '2':
-            print('Solving the model 2')
+            model2()
         elif op == '3':
             print('Solving the model 3')
         elif op == '0':
