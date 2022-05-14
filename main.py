@@ -16,7 +16,8 @@ def model1():
     Lambda = float(input('Lambda: '))
     Mu = float(input('Mu: '))
     n = int(input('n: '))
-    data = {'_Lambda': Lambda, '_Mu': Mu, '_n': n}
+    exceed = int(input('N: '))
+    data = {'_Lambda': Lambda, '_Mu': Mu, '_n': n,'_N': exceed}
     model = Model1(data)
     model.Display()
 
