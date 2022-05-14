@@ -16,7 +16,7 @@ def model1():
     Lambda = float(input('Lambda: '))
     Mu = float(input('Mu: '))
     n = int(input('n: '))
-    exceed = int(input('N: '))
+    exceed = int(input('exceso: '))
     data = {'_Lambda': Lambda, '_Mu': Mu, '_n': n,'_N': exceed}
     model = Model1(data)
     model.Display()
@@ -29,8 +29,7 @@ def model2():
     Mu = float(input('Mu: '))
     n = int(input('n: '))
     k = int(input('k: '))
-    promedio = int(input('LambdaPromedio? (0 no/ 1 si): '))
-    data = {'_Lambda': Lambda, '_Mu': Mu, '_n': n, '_k': k, '_LambdaPromedio': promedio}
+    data = {'_Lambda': Lambda, '_Mu': Mu, '_n': n, '_k': k}
     model = Model2(data)
     model.Display()
 

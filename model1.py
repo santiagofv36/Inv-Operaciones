@@ -48,13 +48,13 @@ class Model1:
         return 1 - sum( (1-ro)*ro**n for n in range(N+1))
 
     def Display(self):
-        n = self.data['_n']
+
         excess = self.data['_N']
         print()
-        print(f'Probabilidad de que el servidor este ocupado: {self.probServerOcupied():.4f}')
+        print(f'Probabilidad de que el servidor este ocupado: {self.probServerOcupied()*100:.0f}%')
         print(f'Numero esperado de elementos siendo atentidos {self.ClientsBeingAttended():.4f}')
-        print(f'Probabilidad de que el servidor exceda el numero de clientes en la cola: {self.probExceeded(excess):.4f}')
-        print(f'Probabilidad de que esl sistema este ocioso: {self.calculateP_n():.4f}')
+        print(f'Probabilidad de que el servidor exceda el numero de clientes en la cola: {self.probExceeded(excess)*100:.2f}%')
+        print(f'Probabilidad de que el sistema este ocioso: {self.calculateP_0()*100:.0f}%')
         print(f'L: {self.calculateL():.4f}')
         print(f'Lq: {self.calculateLq():.4f}')
         print(f'W: {self.calculateW():.4f}')
