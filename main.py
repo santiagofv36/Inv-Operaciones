@@ -7,7 +7,7 @@
 
 from model1 import Model1
 from model2 import Model2
-
+from model3 import Model3
 
 def model1():
     print()
@@ -33,6 +33,17 @@ def model2():
     model = Model2(data)
     model.Display()
 
+def model3():
+    print()
+    print('Solving the model 3')
+    print()
+    Lambda = float(input('Lambda: '))
+    Mu = float(input('Mu: '))
+    N = int(input('N: '))
+    data = {'_Lambda': Lambda, '_Mu': Mu, '_N': N}
+    model = Model3(data)
+    model.Display()
+
 def main():
     op = ''
     while op != '0':
@@ -46,7 +57,7 @@ def main():
         elif op == '2':
             model2()
         elif op == '3':
-            print('Solving the model 3')
+            model3()
         elif op == '0':
             print('Exiting...')
         else:
