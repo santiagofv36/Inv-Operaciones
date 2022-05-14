@@ -9,7 +9,7 @@ class Model1:
 
     def __init__(self, data):
         if data['_Lambda'] > data['_Mu']:
-            print('Lambda must be greater than Mu')
+            print('Error: Lambda must be less than Mu')
             exit()
         self.data = data
 
