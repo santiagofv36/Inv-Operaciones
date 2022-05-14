@@ -8,7 +8,7 @@ class Model1:
     # '_n'
 
     def __init__(self, data):
-        if data['_Lambda'] < data['_Mu']:
+        if data['_Lambda'] > data['_Mu']:
             print('Lambda must be greater than Mu')
             exit()
         self.data = data
